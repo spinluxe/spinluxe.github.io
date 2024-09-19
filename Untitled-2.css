@@ -1,0 +1,128 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1b1b2f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Encabezado */
+.titulo {
+    background-color: #162447;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 5px solid #e43f5a;
+}
+
+.titulo h1 {
+    font-size: 2.5em;
+    color: #e43f5a;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Contenido principal */
+.contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Sección de artículo */
+.articulo {
+    background-color: #1f4068;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    margin: 0 20px;
+    max-width: 400px;
+}
+
+.articulo h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #e43f5a;
+}
+
+/* Botón */
+.articulo button {
+    display: inline-block;
+    background-color: #25d366;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.articulo button:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+}
+
+/* Imágenes a los costados */
+.imagen-mover {
+    max-width: 300px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px;
+    animation: moverLadoALado 5s infinite alternate ease-in-out;
+}
+
+/* Animaciones específicas para cada imagen */
+@keyframes moverLadoALado {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(20px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo h1 {
+        font-size: 2em;
+    }
+
+    .articulo h2 {
+        font-size: 1.5em;
+    }
+
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagen-mover {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .articulo {
+        margin: 20px 0;
+        width: 100%;
+    }
+}
+
